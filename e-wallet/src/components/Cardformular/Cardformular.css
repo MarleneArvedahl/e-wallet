@@ -1,0 +1,43 @@
+
+
+.cardForm {
+    display: flex;
+    flex-direction: column;
+
+    .twoInputBox {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inputBox{
+        padding: 10px;
+
+        .form__text{
+            font-size: 12px;
+            font-family: monospace;
+            margin: 1px;
+            color: rgba(60, 57, 57, 0.711);
+        }
+
+        .form__input {
+            width: 100%;
+            padding: 10px 0px 10px 0px;
+            border-radius: 8px;
+            border: 1px solid rgb(86, 85, 85);
+            font-family: monospace;
+        }
+    }
+
+        .cardform__button {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            background-color: black;
+            color: white;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 18px;
+        }
+    
+
+
+}

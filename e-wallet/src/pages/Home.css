@@ -1,0 +1,36 @@
+.home-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: auto;
+
+    & .top{
+        grid-column: auto / span 1;
+    }
+    
+    & .card {
+        grid-column: auto / span 1;
+        grid-row: auto / span 2;
+    
+    }
+
+    & .cardStack {
+        grid-column: auto / span 1;
+        grid-row: auto / span 6;
+    }
+
+    & .home__button{
+        grid-column: auto / span 1;
+        grid-row: auto / span 1;
+    }
+}
+
+.home__button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: white;
+    border: 1px solid rgb(98, 94, 94);
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 18px;
+}

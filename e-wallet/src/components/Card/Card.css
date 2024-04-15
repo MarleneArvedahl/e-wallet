@@ -1,0 +1,70 @@
+.card {
+    background-color: rgba(255, 166, 0, 0.809);
+    border-radius: 8px;
+    padding: 15px;
+
+    & .card__header {
+        display: flex;
+        justify-content: space-between;
+        
+
+        & .chipDark {
+            height: 80px;
+        }
+
+        & .vendorBitcoin {
+            height: 30px;
+        }
+    }
+
+    .card__main {
+
+        .numberWrapper {
+            display: flex;
+            justify-content: space-around;
+
+            .cardNumber {
+                font-size: 25px;
+                font-family: Arial, sans-serif;
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .card__footer {
+        display: flex;
+        flex-direction: column;
+
+        & .staticText {
+            display: flex;
+            justify-content: space-between;
+            font-family: Arial, sans-serif;
+
+            & .staticText__paragraph{
+                font-size: 12px;
+                color: rgba(0, 0, 0, 0.66);
+                text-shadow: 0.3px 0.3px rgba(255, 255, 255, 0.816);
+                margin: 0;
+            }
+
+
+        }
+
+        & .nameAndDate {
+            display: flex;
+            justify-content: space-between;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            
+            & .name{
+                margin: 0;
+            }
+
+            & .date {
+                margin: 0;
+            }
+
+        }
+    }
+}
