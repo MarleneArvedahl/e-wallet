@@ -14,7 +14,7 @@ function Cardformular() {
 
     let newCard = {...cardStore.newCard};
 
-
+//dispatch skickar upp newCard till updateNewCard
     function handleCardNumberInput(event) {
         newCard.cardNumber = event.target.value;
         dispatch(updateNewCard(newCard));

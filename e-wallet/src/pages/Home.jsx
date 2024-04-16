@@ -2,7 +2,7 @@ import Top from "../components/Top/Top"
 import Card from "../components/Card/Card"
 import CardStack from "../components/CardStack/CardStack"
 import './Home.css'
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import { getActiveCard } from "../reducers/cardsReducer";
 
