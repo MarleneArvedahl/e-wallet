@@ -15,12 +15,12 @@
 
     & .cardStack {
         grid-column: auto / span 1;
-        grid-row: auto / span 6;
+        grid-row: auto / span 3;
     }
 
     & .home__button{
         grid-column: auto / span 1;
-        grid-row: auto / span 1;
+        grid-row: auto / span auto;
     }
 }
 

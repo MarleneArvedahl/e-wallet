@@ -1,4 +1,4 @@
-import Card from "../components/Card/Card"
+
 import Top from "../components/Top/Top"
 import Cardformular from "../components/Cardformular/Cardformular"
 

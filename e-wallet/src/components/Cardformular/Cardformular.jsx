@@ -1,18 +1,18 @@
 import './Cardformular.css';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addCard, placeholderCard, updateNewCard } from '../../reducers/cardsReducer';
+import { addCard, placeholderCard, updateNewCard, vendors } from '../../reducers/cardsReducer';
 import { useSelector } from 'react-redux';
 import Card from '../Card/Card';
 
 function Cardformular() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const cards = useSelector((state) => {
-        return state.cards;
+    const cardStore = useSelector((state) => {
+        return state.cardStore;
     });
 
-    let newCard = {...cards.newCard};
+    let newCard = {...cardStore.newCard};
 
 
     function handleCardNumberInput(event) {
@@ -93,13 +93,18 @@ function Cardformular() {
                         />
                     </div>
                 </section>
+                {/** https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select */} 
                 <section className='inputBox'>
                     <p className='form__text'>VENDOR</p>
-                    <input className='form__input' type='text'
-                    onChange={ handleVendorInput }
-                    placeholder={ placeholderCard.vendor }
-                    value={newCard.vendor}
-                    />
+                    <select className='form__select'
+                        onChange={ handleVendorInput }
+                        value={newCard.vendor}
+                    >
+                        {vendors.map(vendor => (
+                            <option key={vendor.name} value={vendor.id}>{vendor.name}</option>
+                        ))}
+                    </select>
+
                 </section>
                 <button onClick={handleClick} className='cardform__button'>ADD CARD</button>
             </article>

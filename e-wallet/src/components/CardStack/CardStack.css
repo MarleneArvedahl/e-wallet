@@ -1,10 +1,19 @@
-/* 
-.cardStack {
-    position: relative;
 
-     & .card {
-        position: absolute;
-        top: 10px;
+
+.cardStack {
+    
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'overlap';
+     & > .card {
+        grid-area: overlap;
+
+        
+         &:not(:first-child) {
+            margin-top: -200px;
+          
+        }  
     }
 
-} */
+
+}

@@ -4,16 +4,16 @@ import CardStack from "../components/CardStack/CardStack"
 import './Home.css'
 import { useLocation, useNavigate } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import { getActiveCard } from "../reducers/cardsReducer";
 
 function Home() {
     const navigate = useNavigate()
 
-    const cards = useSelector((state) => {
-        return state.cards;
+    const cardStore = useSelector((state) => {
+        return state.cardStore;
     });
 
-    //det valda kortet blir selectedCard
-    const selectedCard = cards.selectedCard < cards.cards.length ? cards.cards[cards.selectedCard] : null;
+    const activeCard = getActiveCard(cardStore);
 
 
     function goToCardformular(){
@@ -23,7 +23,7 @@ function Home() {
     return (
         <div className="home-wrapper">
         <Top />
-        <Card card={selectedCard} />
+        <Card card={activeCard} />
         <CardStack />
         <button className="home__button" onClick={ goToCardformular }>ADD A NEW CARD</button>
         </div>

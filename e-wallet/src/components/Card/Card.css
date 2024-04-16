@@ -1,12 +1,10 @@
 .card {
-    background-color: rgba(255, 166, 0, 0.809);
     border-radius: 8px;
     padding: 15px;
 
     & .card__header {
         display: flex;
         justify-content: space-between;
-        
 
         & .chipDark {
             height: 80px;
@@ -18,7 +16,6 @@
     }
 
     .card__main {
-
         .numberWrapper {
             display: flex;
             justify-content: space-around;
@@ -41,14 +38,10 @@
             justify-content: space-between;
             font-family: Arial, sans-serif;
 
-            & .staticText__paragraph{
+            & .staticText__paragraph {
                 font-size: 12px;
-                color: rgba(0, 0, 0, 0.66);
-                text-shadow: 0.3px 0.3px rgba(255, 255, 255, 0.816);
                 margin: 0;
             }
-
-
         }
 
         & .nameAndDate {
@@ -56,15 +49,30 @@
             justify-content: space-between;
             font-size: 18px;
             font-family: Arial, sans-serif;
-            
-            & .name{
+
+            & .name {
                 margin: 0;
             }
 
             & .date {
                 margin: 0;
             }
-
         }
+    }
+}
+
+.card__light {
+    color: #333333;
+    & .staticText__paragraph {
+        color: rgba(0, 0, 0, 0.66);
+        text-shadow: 0.3px 0.3px rgba(255, 255, 255, 0.816);
+    }
+}
+
+.card__dark {
+    color: #eeeeee;
+    & .staticText__paragraph {
+        color: rgba(255, 255, 255, 0.66);
+        text-shadow: -0.3px -0.3px rgba(100, 100, 100, 0.816);
     }
 }
